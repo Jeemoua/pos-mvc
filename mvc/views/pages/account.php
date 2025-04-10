@@ -24,7 +24,7 @@
 				<form>
 					<div class="py-2 px-4 cl bg2" style="width: 500px;margin: auto">
 						<p class="text-center" style="font-size: 130%">ປຽ່ນລະຫັດຜ່ານ</p>
-						<label>ລະຫັດເກົ່າ</label>
+						<label>Old Password</label>
 						<input id="passwordOld" type="text" class="form-control"  style="background: none;color: white">
 						<label class="mt-2">ລະຫັດໃໝ່</label>
 						<input id="passwordNew" type="text" class="form-control"  style="background: none;color: white">
