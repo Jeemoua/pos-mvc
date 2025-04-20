@@ -29,7 +29,7 @@
 						<p class="text-center" style="font-size: 130%">ເພີ່ມສິນຄ້າ</p>
 						<label>ຊື່</label>
 						<input type="text" class="form-control"  style="background: none;color: white" name="name" >
-						<label class="mt-2">ລາຄາ</label>
+						<label class="mt-2">price</label>
 						<input type="number" class="form-control"  style="background: none;color: white" name="price" >
 						<label class="mt-2">ປະເພດ</label>
 						<select class="form-control" id="exampleFormControlSelect1" style="background: none;" name="type">
