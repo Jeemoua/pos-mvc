@@ -54,8 +54,6 @@ function getTable(){
 	});
 }
 
-
-
 function getProduct(type){
 	document.getElementById("product-box").innerHTML ='';
 	$.ajax({
@@ -70,7 +68,7 @@ function getProduct(type){
 				<img src="./public/images/product/`+item.image+`" width="100%" height="100%">
 				</div>
 				<p class="cl mb-0 mt-2" style="height: 45px;overflow-y: hidden;">`+item.name+`</p>
-				<p class="cl">`+item.price+`$</p>
+				<p class="cl">`+item.price.toLocaleString() + ` ກີບ</p>
 				</div>
 				</div>`
 				document.getElementById("product-box").innerHTML +=data;
@@ -85,7 +83,6 @@ function addToCart(id){
 		GetOrder();
 	})          
 }
-
 
 function EnterCode(){
 	$("#voucher-text").hide();
@@ -117,9 +114,6 @@ $(document).ready(function(){
 	})
 });
 
-
-
-
 function GetTable(id){
 	localStorage.setItem("idTable", JSON.stringify(id));
 	GetOrder();
@@ -135,7 +129,6 @@ function GetTable(id){
 	$('#food-filter').show();
 	$('#drink-filter').show();
 	$("#link-checkout").attr("href", "./Checkout/Index/"+id)
-
 }
 
 function CheckTable(){
@@ -149,6 +142,7 @@ function CheckTable(){
 		}
 	});
 }
+
 function GetOrder(){
 	var total =0;
 	var table =JSON.parse(localStorage.getItem('idTable'));
@@ -158,9 +152,7 @@ function GetOrder(){
 		type: 'get',
 		dataType : 'json',
 		success: function(data){
-
 			$.each (data, function (key, item){
-
 				total +=item.quanlity*item.price;
 				var data = `<div class="p-2 bg1 mb-2" style="height: 67px;width: 100%">
 				<div class="mr-2 float-left" style="width: 50px;height: 50px;background: green">
@@ -182,7 +174,7 @@ function GetOrder(){
 				<div class="float-right bg3 text-center" style="width: 20px;height: 100%" onclick="DeleteOrder(`+item.idproduct+`)">
 				<p class="cl" style="line-height: 50px">x</p>
 				</div>
-				<p class="float-right font-weight-bold cl mr-2" style="font-size: 130%;line-height: 50px">`+item.quanlity*item.price+`$</p>
+				<p class="float-right font-weight-bold cl mr-2" style="font-size: 130%;line-height: 50px">`+(item.quanlity*item.price).toLocaleString() + ` ກີບ</p>
 				</div>
 				<div style="clear: both;"></div>
 				</div>`
@@ -198,7 +190,7 @@ function GetOrder(){
 			localStorage.setItem("fee2", JSON.stringify(parseInt(fee2)));
 			localStorage.setItem("sale", JSON.stringify(parseInt(discount)));
 			localStorage.setItem("voucher", JSON.stringify(parseInt(voucher)));
-			$('#total-text').text(parseInt(total)+"$");
+			$('#total-text').text(parseInt(total).toLocaleString() + " ກີບ");
 		}
 	});
 }
@@ -209,6 +201,7 @@ function UpQuanlity(idproduct){
 		GetOrder();
 	})
 }
+
 function DowQuanlity(idproduct){
 	var checkQuanlity = $('#product-quanlity'+idproduct).text();
 	if(checkQuanlity>1){
@@ -217,16 +210,16 @@ function DowQuanlity(idproduct){
 			GetOrder();
 		})
 	}
-	
 }
+
 function DeleteOrder(idproduct){
 	var idtable =JSON.parse(localStorage.getItem('idTable'));
 	$.post("./Order/DeleteOrder/",{idproduct:idproduct,idtable:idtable},function(data){	
 		GetOrder();
 	})
 }
-$(document).ready(function() {
 
+$(document).ready(function() {
 	$('#back-button').on('click',function(){
 		getProduct(0);
 		$('#logo-text').show();
@@ -254,6 +247,5 @@ $(document).ready(function() {
 		GetOrder();
 		CheckTable();
 		getTable();
-
 	})
 });
