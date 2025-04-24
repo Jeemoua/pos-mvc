@@ -2,7 +2,7 @@
 <div id="checkout-box" class="container-fluid p-0">
 	<div class="row m-0">
 		<div class="p-2 bg2" style="height: 100vh;width: 320px;">
-			<p class="ml-1 font-weight-bold cl" style="font-size: 130%">MANAGE</p>
+			<p class="ml-1 font-weight-bold cl" style="font-size: 130%">ຈັດການຂໍ້ມູມ</p>
 			
 			
 			<div class="row m-0">
@@ -52,7 +52,7 @@
 							<th scope="col">Fee</th>
 							<th scope="col">Sale</th>
 							<th scope="col">Voucher</th>
-							<th scope="col">Total</th>
+							<th scope="col4">Total</th>
 						</tr>
 					</thead>
 					<tbody>					

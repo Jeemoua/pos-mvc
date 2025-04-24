@@ -55,9 +55,6 @@ class System extends Controller{
 		header( "Location: ../System/Index" );
 
 	}
-
-	
-
 	
 }
 ?>
