@@ -2,7 +2,7 @@
 <div class="container-fluid p-0">
     <div class="row m-0">
         <div class="p-2 bg2" style="height: 100vh;width: 320px;">
-            <p class="ml-1 font-weight-bold cl" style="font-size: 130%">ຈັດການ</p>
+            <p class="ml-1 font-weight-bold cl" style="font-size: 130%">ຈັດການຂໍ້ມູນ</p>
             <div class="row m-0">
                 <?php include("./mvc/views/partials/home-menu-account.php"); ?>
                 <?php include("./mvc/views/partials/home-menu-item.php"); ?>
@@ -63,7 +63,7 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">ເບີໂຕະ</th>
-                                                    <th scope="col">ປະເພດ</th>
+                                                   
                                                     <th scope="col">ຈັດການ</th>
                                                 </tr>
                                             </thead>
@@ -71,14 +71,10 @@
                                                 <?php
                                                 $typeText;
                                                 foreach ($data["Table"] as $value) {
-                                                    if($value["type"]==1){
-                                                        $typeText="ທຳມະດາ";
-                                                    }else{
-                                                        $typeText="Vip";
-                                                    }
+
                                                     echo '<tr>
                                                     <td>'.$value["number"].'</td>
-                                                    <td>'.$typeText.'</td>
+                                                  
                                                     <td>
                                                     <div class="btn bg-white text-dark float-left mr-2" onclick="EditTable('.$value["id"].','.$value["number"].','.$value["type"].')">ແກ້ໄຂ</div>
                                                     <a href="../Table/DeleteTable/'.$value["id"].'" 
@@ -98,13 +94,7 @@
                                                 <label>ເບີ</label><br>
                                                 <input id="numberTable" type="" class="form-control" name="numberTable">
                                             </div>
-                                            <div  class="px-2" style="width: 30%">
-                                                <label>Type</label><br>
-                                                <select id="typeTable" class="form-control" name="typeTable">
-                                                    <option value="1">ທຳມະດາ</option>
-                                                    <option value="2">Vip</option>
-                                                </select>
-                                            </div>
+                                           
                                             <div  class="px-2" style="width: 30%">
                                                 <button type="submit" class="btn" style="margin-top: 32px">ແກ້ໄຂໂຕະ</button>
                                             </div>
@@ -116,13 +106,7 @@
                                                 <label>ເບີໂຕະ</label><br>
                                                 <input type="" class="form-control" name="numberTable">
                                             </div>
-                                            <div  class="px-2" style="width: 30%">
-                                                <label>ປະເພດ</label><br>
-                                                <select class="form-control" name="typeTable">
-                                                    <option value="1">ທຳມະດາ</option>
-                                                    <option value="2">Vip</option>
-                                                </select>
-                                            </div>
+                                    
                                             <div  class="px-2" style="width: 30%">
                                                 <button type="submit" class="btn" style="margin-top: 32px">ເພີ່ມໂຕະ</button>
                                             </div>

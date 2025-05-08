@@ -2,7 +2,7 @@
 <div class="container-fluid p-0">
 	<div class="row m-0">
 		<div class="p-2 bg2" style="height: 100vh;width: 320px;">
-			<p class="ml-1 font-weight-bold cl" style="font-size: 130%">ຈັດການຂໍ້ມູມ</p>
+			<p class="ml-1 font-weight-bold cl" style="font-size: 130%">ຈັດການຂໍ້ມູນ</p>
 
 
 			<div class="row m-0">
