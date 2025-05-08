@@ -55,7 +55,7 @@ class tbl_table extends DB{
 
 	public function AddTable($number,$type){
 		$qr = "INSERT INTO tbl_table (number,type,customer,status)
-		VALUES ('$number','$type','4','1')";
+		VALUES ('$number','1','4','1')";
 		mysqli_query($this->con, $qr);
 	}
 	

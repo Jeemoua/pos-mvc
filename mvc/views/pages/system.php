@@ -62,8 +62,7 @@
                                         <table class="table bg2 cl">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">ເບີໂຕະ</th>
-                                                   
+                                                    <th scope="col">ເບີໂຕະ</th>                                
                                                     <th scope="col">ຈັດການ</th>
                                                 </tr>
                                             </thead>
@@ -73,10 +72,8 @@
                                                 foreach ($data["Table"] as $value) {
 
                                                     echo '<tr>
-                                                    <td>'.$value["number"].'</td>
-                                                  
-                                                    <td>
-                                                    <div class="btn bg-white text-dark float-left mr-2" onclick="EditTable('.$value["id"].','.$value["number"].','.$value["type"].')">ແກ້ໄຂ</div>
+                                                    <td>'.$value["number"].'</td>                                                 
+                                                    <td>                                                  
                                                     <a href="../Table/DeleteTable/'.$value["id"].'" 
                                                     style="text-decoration: none;color:black;">
                                                     <div class="btn bg-white text-dark float-left">ລົບ</div>
@@ -93,10 +90,6 @@
                                             <div class="px-2" style="width: 30%">
                                                 <label>ເບີ</label><br>
                                                 <input id="numberTable" type="" class="form-control" name="numberTable">
-                                            </div>
-                                           
-                                            <div  class="px-2" style="width: 30%">
-                                                <button type="submit" class="btn" style="margin-top: 32px">ແກ້ໄຂໂຕະ</button>
                                             </div>
                                         </div>
                                     </form>
