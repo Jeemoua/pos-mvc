@@ -23,35 +23,7 @@
                     <div class="col-6 p-0">
                         <div class="row m-0 p-2">
                             <div class="col-12 p-2">
-                                <div class="p-2 cl bg2">
-                                    <form action="../System/ChangeColor" method="post" enctype='multipart/form-data'>
-                                        <p class="text-center" style="font-size: 130%">ຕີມ</p>
-                                        <div class="row m-0">
-                                            <?php
-                                            foreach ($data["GetTheme"] as $value) {
-                                                echo '<div class="col-6 p-0 mt-2">
-                                                <label>ພື້ນຫລັງ 1</label><br>
-                                                <input id="color1" type="color" value="'.$value["color1"].'" name="color1">	<br>
-                                                </div><div class="col-6 p-0 mt-2">
-                                                <label>ພື້ນຫລັງ 2</label><br>
-                                                <input id="color2" type="color" value="'.$value["color2"].'" name="color2">	<br>
-                                                </div><div class="col-6 p-0 mt-2">
-                                                <label>ພື້ນຫລັງ 3</label><br>
-                                                <input id="color3" type="color" value="'.$value["color3"].'" name="color3">	<br>
-                                                </div><div class="col-6 p-0 mt-2">
-                                                <label>ຂໍ້ຄວາມ</label><br>
-                                                <input id="color4" type="color" value="'.$value["color4"].'" name="color4">	<br>
-                                                </div>';
-                                            }
-                                            ?>
-                                        </div>
-                                        <div>
-                                            <button type="submit" class="form-control mt-3 float-left" style="width: 70%">ປ່ຽນສີ</button>
-                                            <div class="btn float-right bg-white mt-3 text-dark" onclick="SetDefaultColor()">ຕັ້ງເປັນຄ່າມາດຕະຖານ</div>
-                                            <div style="clear: both;"></div>
-                                        </div>
-                                    </form>
-                                </div>
+                                
                             </div>
 
                             <div class="col-12 p-2">
