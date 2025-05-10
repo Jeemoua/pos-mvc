@@ -50,5 +50,14 @@ class tbl_product extends DB{
 		
 		return mysqli_query($this->con, $qr);
 	}
+	 public function GetActiveProducts() {
+        $qr = "SELECT * FROM tbl_product WHERE active = 1 ORDER BY id DESC";
+        $result = mysqli_query($this->con, $qr);
+        $products = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $products[] = $row;
+        }
+        return $products;
+    }
 }
 ?>
